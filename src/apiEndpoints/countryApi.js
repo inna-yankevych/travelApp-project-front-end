@@ -1,4 +1,4 @@
-import apiClient from "../apiAxios.js";
+import apiClient from "./apiClient.js";
 
 export async function getCountries() {
   const response = await apiClient.get("/countries");

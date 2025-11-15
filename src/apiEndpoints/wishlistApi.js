@@ -1,21 +1,21 @@
 import apiClient from "./apiClient.js";
 
-export async function getAllWishLists() {
+export async function getAllWishlists() {
   const response = await apiClient.get("/wishlist");
   return response.data;
 };
 
-export async function getOneWishListById(id) {
+export async function getOneWishlistById(id) {
   const response = await apiClient.get(`/wishlist/${id}`);
   return response.data;
 };
 
-export async function createWishList(id, wishListData) {
+export async function createWishlist(id, wishListData) {
   const response = await apiClient.post("/wishlist", wishListData);
   return response.data;
 };
 
-export async function updateWishListById(id, wishListData) {
+export async function updateWishlistById(id, wishListData) {
   const response = await apiClient.patch(`/wishlist/${id}`, wishListData);
   return response.data;
 };
