@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { getAllWishlists, createWishlist, deleteWishlistById } from "../apiEndpoints/wishlistApi";
-import { useWishlist, useWishlists } from "../hooks/useWishlist";
 
 export default function Wishlist() {
   const [wishlist, setWishlist] = useState([]);
