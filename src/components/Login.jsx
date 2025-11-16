@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { loginUser } from "../apiEndpoints/userApi";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -14,6 +17,7 @@ export default function Login() {
       setMessage("Login successful!");
       console.log("Token:", data.token);
       // localStorage.setItem("token", data.token);
+      navigate("/");
     } catch (error) {
       setMessage("Login failed.");
       console.log("error", error);

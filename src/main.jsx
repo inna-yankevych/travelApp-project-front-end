@@ -10,15 +10,16 @@ import { CountriesPage } from './pages/Countries.jsx';
 import { CountryDetailPage } from './pages/CountryDetail.jsx';
 import { WishlistPage } from './pages/WishlistPage.jsx';
 import Login from './pages/Login.jsx';
-import Register from './pages/Signup.jsx';
+import Signup from './pages/Signup.jsx';
 import './App.css';
+import SignupPage from './pages/Signup.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />}/>
-        <Route path="/register" element={<Register />}/>
+        <Route path="/register" element={<SignupPage />}/>
         <Route element={<Layout />}>
           <Route path="/" element={<Homepage />}/>
           <Route path="/cities" element={<CitiesPage />}/>

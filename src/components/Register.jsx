@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { registerUser } from "../apiEndpoints/userApi";
 
 export default function Register() {
   const [form, setForm] = useState({ email: "", password: "", name: "" });
   const [message, setMessage] = useState("");
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -15,6 +18,7 @@ export default function Register() {
     try {
       await registerUser(form);
       setMessage("Registration successful!");
+      navigate("/");
     } catch (error) {
       setMessage("Registration failed.");
     }

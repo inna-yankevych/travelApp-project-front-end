@@ -23,26 +23,16 @@ This project is the frontend application of the TravelApp system. It works toget
 - Clean and responsive UI
 - Fully connected to the TravelApp backend API
 
-## 🖥️ Pages
+## 🖥️ Pages / Routes
 
-- Homepage
-
-
-- Login Page
-
-
-- Register Page
-
-
-- Countries Page
-
-
-- Cities Page
-
-
-- Wishlist Page
-
-
+-  "/" Homepage
+- "/login" 
+- "/register" 
+- "/cities"
+- "/cities/:id" 
+- "/countries" 
+- "/countries/:id" 
+- "/wishlist" 
 
 ## 🛠️ Technologies Used
 

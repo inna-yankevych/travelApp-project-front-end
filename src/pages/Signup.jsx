@@ -1,11 +1,12 @@
 import Register from "../components/Register";
 
-export default function Signup() {
+export default function SignupPage() {
 
   return (
     <div>
-      <h1> Intention Destination </h1>
-        <Register/>    
+      <h1> DreamTravel</h1>
+        <Register />  
+
     </div>
   );
 }
