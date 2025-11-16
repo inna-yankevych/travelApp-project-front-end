@@ -1,4 +1,4 @@
-import { loginUser, registerUser } from "./apiEndpoints/userApi";
+import { loginUser, registerUser } from "../apiEndpoints/userApi";
 
 test("register user returns success message", async () => {
   const response = await registerUser({
