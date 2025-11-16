@@ -11,7 +11,7 @@ export function useCountries () {
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
-    getCountries().then((data) => setCountries(data.countries));
+    getCountries().then((data) => setCountries(data.countries || data));
   }, []);
 
   return { countries };

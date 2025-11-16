@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useCountry } from "../hooks/useCountries";
 import { CountryInfoCard } from "../components/CountryInfoCard";
-import { VaxRequirements } from "../components/VaxRequirements";
+import VaxRequirements from "../components/VaxRequirements";
 
 export function CountryDetailPage() {
     const { id } = useParams();

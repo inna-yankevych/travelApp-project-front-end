@@ -1,5 +1,5 @@
 import { useCountries } from "../hooks/useCountries";
-import { CountryCard } from "../components/CountryInfoCard";
+import { CountryInfoCard } from "../components/CountryInfoCard";
 
 export function CountriesPage() {
     const { countries } = useCountries();
@@ -8,7 +8,7 @@ export function CountriesPage() {
         <div className="countries-page">
             <h2>All Countries</h2>
             <div className="cards-grid">
-                {countries.map(c => <CountryCard key={c._id} country={c} />)}
+                {countries.map(c => <CountryInfoCard key={c._id} country={c} />)}
             </div>
         </div>
     );
