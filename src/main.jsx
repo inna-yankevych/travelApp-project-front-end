@@ -11,6 +11,7 @@ import { CountryDetailPage } from './pages/CountryDetail.jsx';
 import { WishlistPage } from './pages/WishlistPage.jsx';
 import Login from './pages/Login.jsx';
 import Register from './pages/Signup.jsx';
+import './App.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
