@@ -1,41 +1,43 @@
 import { useState, useEffect } from "react";
 import {
   getAllWishlists,
-  getOneWishlistById,
   createWishlist,
-  updateWishlistById,
   deleteWishlistById
 } from "../apiEndpoints/wishlistApi.js"
 
 export function useWishlists () {
   const [wishlists, setWishlists] = useState([]);
 
+  const loadWishlists = async() => {
+    try {
+      const items = await getAllWishlists();
+      setWishlists(Array.isArray(items) ? items : []);
+    } catch (error) {
+      console.error("Failed to load wishlists", error);
+    }
+  };
+
   useEffect(() => {
-    getAllWishlists().then(setWishlists);
+    loadWishlists();
   }, []);
 
-  return { wishlists };
-};
+  const addToWishlist = async(data) => {
+    try {
+      await createWishlist(data);
+      await loadWishlists();
+    } catch (error) {
+      console.error("Failed to add to wishlist", error);
+    }
+  };
 
-export function useWishlist (id) {
-  const [wishlist, setWishlist] = useState(null);
+  const removeFromWishlist = async (id) => {
+    try {
+      await deleteWishlistById(id);
+      await loadWishlists();
+    } catch (error) {
+      console.error("Failed to remove from wishlist", error);
+    }
+  };
 
-  useEffect(() => {
-    if (!id) return;
-    getOneWishlistById(id).then(setWishlist);
-  }, [id]);
-
-  return { wishlist };
-};
-
-export function useCreateWishlist() {
-  return async (data) => await createWishlist(data);
-};
-
-export function useUpdateWishlist() {
-  return async (id, data) => await updateWishlistById(id, data);
-};
-
-export function useDeleteWishlist() {
-  return async (id) => await deleteWishlistById(id);
-};
+  return { wishlists, addToWishlist, removeFromWishlist };
+}
