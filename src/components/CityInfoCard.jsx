@@ -1,7 +1,7 @@
-import { useWishlist } from "../hooks/useWishlist";
+import { useWishlists } from "../hooks/useWishlist";
 
 export function CityInfoCard({ city }) {
-    const { addToWishlist } = useWishlist();
+    const { addToWishlist } = useWishlists();
 
     const handleAddWishlist = () => {
         addToWishlist({ name: city.name });
