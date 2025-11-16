@@ -10,9 +10,10 @@ const cityImages = {
 export function CityCard({ city }) {
     return (
         <div className="city-card">
-            <img src={cityImages[city.name]} alt={city.name} />
-            <h3>{city.name}</h3>
-            <Link to={`/cities/${city._id}`}>View Details</Link>
+            <Link to={`/cities/${city._id}`}>
+                <img src={cityImages[city.name]} alt={city.name} />
+                <h3>{city.name}</h3>
+            </Link>
         </div>
     );
 }

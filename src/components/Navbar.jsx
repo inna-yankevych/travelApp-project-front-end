@@ -8,8 +8,6 @@ export function Navbar(){
         {" | "}
         <NavLink to={"/cities"}>Cities</NavLink>
         {" | "}
-        <NavLink to={"/activities"}>Activities</NavLink>
-        {" | "}
         <NavLink to={"/wishlist"}>My WishList</NavLink>
     </nav>
 }
