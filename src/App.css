@@ -87,7 +87,7 @@ footer p {
     height: 180px;
     object-fit: cover;
     border-radius: 6px;
-    margin-bottom: 0.5reml
+    margin-bottom: 0.5rem;
 }
 
 .city-card h3, .country-card h3 {
@@ -118,7 +118,7 @@ footer p {
 
 .city-info-card button {
     margin-top: 1rem;
-    padding: 0.5 rem 1 rem;
+    padding: 0.5rem 1rem;
     background-color: #8675A9;
     color: #fff;
     border: none;
@@ -178,7 +178,7 @@ ul {
 ul li {
     background-color: #fff;
     padding: 0.5rem 1rem;
-    margin-bottom: 0.5 rem;
+    margin-bottom: 0.5rem;
     border-radius: 6px;
     display: flex;
     justify-content: space-between;
@@ -188,13 +188,44 @@ ul li {
 ul li button {
     background-color: #cc0000;
     color: #fff;
-    padding: 0.3rem 0.7 rem;
+    padding: 0.3rem 0.7rem;
     border: none;
     border-radius: 4px;
 }
 
 ul li button:hover {
     background-color: #990000;
+}
+
+/* Pages Layout */
+.cities-page, .countries-page, .country-detail-page, .city-detail-page, .wishlist-page, .homepage {
+    padding: 1rem 0;
+}
+
+.cities-page h2,
+.countries-page h2,
+.wishlist-page h2,
+.country-detail-page h2 {
+    margin-bottom: 1rem;
+    color: #4B3B6B;
+}
+
+.homepage h1 {
+    font-size: 2.5rem;
+    color: #4B3B6B;
+    margin-bottom: 1rem;
+}
+
+.homepage p {
+    font-size: 1.2rem;
+}
+
+/* Cards grid in pages */
+.cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
 }
 
 /* Responsive Design */
@@ -211,4 +242,13 @@ ul li button:hover {
     main {
         padding: 1rem;
     }
+
+    .homepage h1 {
+        font-size: 2rem;
+    }
+
+    .homepage p {
+        font-size: 1rem;
+    }
 }
+
