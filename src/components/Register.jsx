@@ -26,6 +26,7 @@ export default function Register() {
       <form onSubmit={handleSubmit}>
         <input name="name" placeholder="Name" onChange={handleChange} />
         <input name="email" placeholder="Email" onChange={handleChange} />
+        <input name="citizenship" placeholder="Citizenship" onChange={handleChange} />
         <input name="password" type="password" placeholder="Password" onChange={handleChange} />
         <button type="submit">Register</button>
       </form>

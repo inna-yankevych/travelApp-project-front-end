@@ -9,11 +9,15 @@ import { CityDetailPage } from './pages/CityDetail.jsx';
 import { CountriesPage } from './pages/Countries.jsx';
 import { CountryDetailPage } from './pages/CountryDetail.jsx';
 import { WishlistPage } from './pages/WishlistPage.jsx';
+import Login from './pages/Login.jsx';
+import Register from './pages/Signup.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
+        <Route path="/login" element={<Login />}/>
+        <Route path="/register" element={<Register />}/>
         <Route element={<Layout />}>
           <Route path="/" element={<Homepage />}/>
           <Route path="/cities" element={<CitiesPage />}/>
