@@ -8,9 +8,11 @@ export function CitiesPage() {
     return (
         <div className="cities-page">
             <h2>Available Cities</h2>
-            {cities.map((city) => (
-                <CityCard key={city._id} city={city} />
-            ))}
+            <div className="cards-grid">
+                {cities.map((city) => (
+                    <CityCard key={city._id} city={city} />
+                ))}
+            </div>
         </div>
     );
 }
