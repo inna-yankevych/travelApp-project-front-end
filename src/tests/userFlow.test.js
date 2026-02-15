@@ -1,3 +1,4 @@
+import { test, expect } from "vitest";
 import { loginUser, registerUser } from "../apiEndpoints/userApi";
 
 test("register user returns success message", async () => {
