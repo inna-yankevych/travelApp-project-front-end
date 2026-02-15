@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { getAllCities } from "./apiEndpoints/cityApi";
+import { getAllCities } from "../apiEndpoints/cityApi.js";
 
 test("getAllCities returns an array of cities", async () => {
   const cities = await getAllCities();
